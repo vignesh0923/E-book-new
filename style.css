@@ -1,0 +1,255 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+
+.container h1{
+    color: #2196f3;
+    text-align: center;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+
+.container{
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    width: 450px;
+    height: 400px;
+    margin: 0 auto;
+    top: 130px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 140px;
+}
+
+.container .input-group{
+    padding-bottom: 30px;
+}
+
+
+
+.input-group{
+    font-size: 1.25rem;
+    position: relative;
+    --primary: #2196f3
+}
+
+.input{
+    all: unset;
+    color:  #d4d4d4;
+    padding: 1rem;
+    border: 1px solid #9e9e9e;
+    border-radius: 10px;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.label{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #d4d4d4;
+    pointer-events: none;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.input:focus{
+    border: 1px solid var(--primary);
+}
+
+.input:is(:focus, :valid) ~ label{
+    transform: translateY(-120%)
+            scale(0.7);
+    background-color: white;
+    padding-inline: 0.3rem;
+    border-radius: 5px;
+    color: var(--primary);
+}
+
+input[type="submit"]{
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+    background-color: #2196f3;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #2196f3,
+    0 0 60px #2196f3;
+    color: white;
+}
+
+nav{
+    background: #2196f3;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    column-gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.heading h1{
+    font-size: 30px;
+
+}
+
+
+.main-container{
+    padding: 10px;
+}
+
+.book-container{
+    padding: 20px;
+    border-radius: 20px;
+    width: 25%;
+    background-color: #2196f3;
+    color: black;
+    margin: 30px;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+
+.book-container h2,h3,p{
+    color: black;
+    padding: 5px;
+}
+
+.book-container h2{
+    font-weight: bold;
+}
+
+.book-container p{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.book-container button{
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+    background-color: #0078db;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #2196f3,
+    0 0 60px #2196f3;
+    color: black;
+    margin-top: 1vw;
+}
+
+.add-button{
+    background: #2196f3;
+    color: black;
+    border-radius: 50%;
+    padding: 20px 30px 20px 30px;
+    font-size: 40px;
+    border: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.popup-overlay{
+    background: #000;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+
+.popup-box{
+    background-color: #2196f3;
+    width: 40%;
+    padding: 40px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    z-index: 2;
+    display: none;
+}
+
+.popup-box input{
+    background: transparent;
+    border: none;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    border-bottom: solid black 2px;   
+}
+
+.popup-box textarea{
+    background: transparent;
+    border: none;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    border: solid black 2px;   
+}
+
+
+.popup-box input::placeholder{
+    color: black;
+}
+
+
+.popup-box textarea::placeholder{
+    color: black;
+}
+
+.popup-box button{
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+    background-color: #0078db;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #2196f3,
+    0 0 60px #2196f3;
+    color: black;
+    margin-top: 1vw;
+}
+
+.popup-box input:focus{
+    outline: none;
+}
+
+.popup-box textarea:focus{
+    outline: none;
+}
